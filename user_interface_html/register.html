@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <title>PolitiKnow Registration</title>
+
+    <!-- Custom styles for this template -->
+    <style>
+        html,body {
+    height: 100%;
+    }
+
+    body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #333;
+    color: #fff;
+    }
+
+    .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    }
+    .form-signin .checkbox {
+    font-weight: 400;
+    }
+    .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    }
+    .form-signin .form-control:focus {
+    z-index: 2;
+    }
+    .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    }
+    .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    }
+
+    </style>
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" method="POST">
+      <h1 class="h3 mb-3 font-weight-normal">PolitiKnow Registration</h1>
+      <label>Answer the following questions and enter the needed information to register your account on PolitiKnow!</label><br></br>
+      <label for="inputName" class="sr-only">Name</label>
+      <input name="name" id="name" class="form-control" placeholder="Full Name" required autofocus>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input name="email" id="email" type="email" class="form-control" placeholder="Email address" required>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input name="password" type="password" id="password" class="form-control" placeholder="Password" required>
+      <br></br>
+      <!--<label>Move the following slider to the left if you are Democrat, or to the right if you are a Republican:</label><br></br>-->
+      <label>Adjust the following sliders to reflect your profile type, political standing, and birth gender:</label><br></br>
+      Voter <input name="category" type="range" min="1" max="2" value="1" class="slider" id="category"> Politician<br></br>
+      Democrat <input name="party" type="range" min="1" max="2" value="1" class="slider" id="party"> Republican<br></br>
+      Female <input name="gender" type="range" min="1" max="2" value="1" class="slider" id="gender"> Male<br></br>
+      <label>Adjust the following sliders to reflect your views. All the way to the left is "Not at all", and all the way to the left is "Completely":</label><br></br>
+      <label>1) I support abortion rights:</label><br>
+      <input name="abortion" type="range" min="1" max="10" value="5" class="slider" id="abortion">
+      <label>2) I support same-sex marriage:</label><br>
+      <input name="gay" type="range" min="1" max="10" value="5" class="slider" id="gay">
+      <label>3) I support the right to bear arms:</label><br>
+      <input name="arms" type="range" min="1" max="10" value="5" class="slider" id="arms">
+      <label>4) I support affirmative action programs:</label><br>
+      <input name="affirm" type="range" min="1" max="10" value="5" class="slider" id="affirm">
+      <label>5) I support harsh immigration policies:</label><br>
+      <input name="immigration" type="range" min="1" max="10" value="5" class="slider" id="immigration">
+      <label>6) I support government provided health care and other aid:</label><br>
+      <input name="healthcare" type="range" min="1" max="10" value="5" class="healthcare" id="arms">
+      <label>7) I support the legalization of marijuana:</label><br>
+      <input name="weed" type="range" min="1" max="10" value="5" class="slider" id="weed">
+      <label>8) I support raising taxes on the wealthy:</label><br>
+      <input name="taxes" type="range" min="1" max="10" value="5" class="slider" id="taxes">
+      <label>9) I support raising minimum wages:</label><br>
+      <input name="wages" type="range" min="1" max="10" value="5" class="slider" id="wages">
+      <label>10) I support government investment into solving environmental issues:</label><br>
+      <input name="enviro" type="range" min="1" max="10" value="5" class="slider" id="enviro">
+      <label>11) I support increasing government spending on military/defence:</label><br>
+      <input name="defence" type="range" min="1" max="10" value="5" class="slider" id="defence">
+      <label>12) I support the requirement that police officers must wear body cameras:</label><br>
+      <input name="bodycam" type="range" min="1" max="10" value="5" class="slider" id="bodycam">
+      <label>13) I support increasing government spending on public schools and universities:</label><br>
+      <input name="schools" type="range" min="1" max="10" value="5" class="slider" id="schools">
+      <label>14) I support government invesment in clean/renewable energy:</label><br>
+      <input name="energy" type="range" min="1" max="10" value="5" class="slider" id="energy">
+      <br></br>
+      <button class="btn btn-lg btn-success btn-block" type="submit">Register</button>
+      <p class="mt-5 mb-3 text-muted">&copy; PolitiKnow 2018</p>
+    </form>
+  </body>
+</html>
