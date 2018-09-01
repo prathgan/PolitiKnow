@@ -12,7 +12,7 @@ only about candidates which PolitiKnow thinks they might be interested in, but a
 can tailor their "discover" functionality to include various types of candidates, including those who directly oppose
 their views, all candidates, those of a certain party, and many more categories.
 ## Running PolitiKnow Locally
-Please note: there currently exists no production built of PolitiKnow which is hosted anywhere. Thus, it can only be run
+**Please note**: there currently exists no production built of PolitiKnow which is hosted anywhere. Thus, it can only be run
 locally and all data and machine learning is stored and executed locally. A production built is in the works and will be
 hosted online soon with cloud data storage and ML. Stay tuned.
 
