@@ -12,8 +12,8 @@ only about candidates which PolitiKnow thinks they might be interested in, but a
 can tailor their "discover" functionality to include various types of candidates, including those who directly oppose
 their views, all candidates, those of a certain party, and many more categories.
 ## Running PolitiKnow Locally
-**Please note**: there currently exists no production built of PolitiKnow which is hosted anywhere. Thus, it can only be run
-locally and all data and machine learning is stored and executed locally. A production built is in the works and will be
+**Please note**: there currently exists no production build of PolitiKnow which is hosted anywhere. Thus, it can only be run
+locally and all data and machine learning is stored and executed locally. A production build is in the works and will be
 hosted online soon with cloud data storage and ML. Stay tuned.
 
 
@@ -51,5 +51,5 @@ editor of your choice in the following manner:
 | 18 | 1                 |
 | 19 | 1                 |
 
-Then, `cd` to the root of the PolitiKnow directory again, and run `export FLASK_APP`. Finally, run `flask run` from the root of the directory and you're all set!
+Then, after the `.csv` file has been created and all dependencies are installed, `cd` to the root of the PolitiKnow directory again, and run `export FLASK_APP`. Finally, run `flask run` from the root of the directory and you're all set!
 Navigate to the url displayed in your terminal window after you ran the last command and you can start using PolitiKnow!
