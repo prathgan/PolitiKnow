@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>PoliView</title>
+  </head>
+  <body style="background-color:#ced6e0; font-family: 'Niramit', sans-serif;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">PolitiKnow</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/voter_homepage/{{ info[0] }}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/voter_interests/{{ info[0] }}">Interests</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/voter_home_initial/{{ info[0] }}">Explore</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Politician Name" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <br>
+    <div style="padding-left:15px">
+      <center><h1>{{ info[1][0] }}</h><br></br>
+      <img src='{{ info[1][19] }}' height=300 width=300 style='border-radius:20px;'></center><br>
+      <h6 style="padding-left:30%;padding-right:30%">{{ info[1][4] }}</h6>
+      <br><br/>
+      <center><div id="piechart"></div></center>
+      <center>
+      <table class="table table-dark" style="width:55%;border-radius: 20px;">
+        <thead>
+          <tr>
+            <th scope="col"><center>{{ info[1][0] }}, {{ info[1][1] }} years old, {{ info[1][3] }}, {{ info[1][2] }} candidate</center></th>
+          </tr>
+        </thead>
+        <tbody>
+              <tr>
+                  <th scope="row">Support for abortion rights: <h6 style="color:#e67e22">{{ info[1][5] }}/10</h></th>
+              </tr>
+              <tr>
+                <th scope="row">Support for same-sex marriage rights: <h6 style="color:#e67e22">{{ info[1][6] }}/10</h></th>
+              </tr>
+              <tr>
+                <th scope="row">Support for second amendment rights: <h6 style="color:#e67e22">{{ info[1][7] }}/10</h></th>
+              </tr>
+              <tr>
+                <th scope="row">Support for affirmative action programs: <h6 style="color:#e67e22">{{ info[1][8] }}/10</h></th>
+              </tr>
+              <tr>
+                <th scope="row">Support for harsher immigration policies: <h6 style="color:#e67e22">{{ info[1][9] }}/10</h></th>
+              </tr>
+              <tr>
+                <th scope="row">Support for government aid programs (including healthcare, food stamps, etc.): <h6 style="color:#e67e22">{{ info[1][10] }}/10</h></th>
+              </tr>
+              <tr>
+                <th scope="row">Support for legalization/decriminalization of recreational Marijuana use: <h6 style="color:#e67e22">{{ info[1][11] }}/10</h></th>
+              </tr>
+              <tr>
+                <th scope="row">Support for raising taxes on the wealthy: <h6 style="color:#e67e22">{{ info[1][12] }}/10</h></th>
+              </tr>
+              <tr>
+                <th scope="row">Support for the federal minimum wage: <h6 style="color:#e67e22">{{ info[1][13] }}/10</h></th>
+              </tr>
+              <tr>
+                <th scope="row">Support for increased government investment into environmental protection initiatives: <h6 style="color:#e67e22">{{ info[1][14] }}/10</h></th>
+              </tr>
+              <tr>
+                <th scope="row">Support for increased government investment into military: <h6 style="color:#e67e22">{{ info[1][15] }}/10</h></th>
+              </tr>
+              <tr>
+                <th scope="row">Support for the requirement that all police officers wear body cameras: <h6 style="color:#e67e22">{{ info[1][16] }}/10</h></th>
+              </tr>
+              <tr>
+                <th scope="row">Support for increased government investment into public schools & universities: <h6 style="color:#e67e22">{{ info[1][17] }}/10</h></th>
+              </tr>
+              <tr>
+                <th scope="row">Support for increased government investment into renewable energy initiatives: <h6 style="color:#e67e22">{{ info[1][18] }}/10</h></th>
+              </tr>
+          </tbody>
+        </table>
+      </center>
+
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      // Load google charts
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Draw the chart and set the chart values
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+        ['State', '# Supporters'],
+        {% for state in info[2] %}
+        ['{{ state }}',{{ info[2].get(state) }}],
+        {% endfor %}
+      ]);
+
+        // Optional; add a title and set the width and height of the chart
+        var options = {'title':'Support for {{ info[1][0] }} by State', 'width':550, 'height':400, backgroundColor: '#ced6e0',is3D: true};
+
+        // Display the chart inside the <div> element with id="piechart"
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+      </script>
+  </body>
+</html>

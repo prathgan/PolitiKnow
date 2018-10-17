@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <title>{{ person[0] }}</title>
+  </head>
+  <body style="background-color:#ced6e0; font-family: 'Niramit', sans-serif;">
+    <div id="listDiv" style="display:none;">
+      <button type="button" class="btn btn-warning" onclick="history.back()"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button>
+    <br></br>
+    <center>
+        <h1>Explore</h1>
+    <br>
+    <div>
+      Learn more about a specific politician, their background, and their beliefs in the below card:
+    </div>
+    </center>
+    <br>
+    <br>
+    <center>
+      <table class="table table-dark" style="width:50%;border-radius: 20px;">
+        <thead>
+          <tr>
+            <th scope="col"><center>{{ person[0] }}, {{ person[1] }} years old, {{ person[3] }}, {{ person[2] }} candidate</center></th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <th scope="row">Biography: <h6 style="color:#2ecc71">{{ person[4] }}</h></th>
+            </tr>
+            <tr>
+                <th scope="row">Support for abortion rights: <h6 style="color:#e67e22">{{ person[5] }}/10</h></th>
+            </tr>
+            <tr>
+              <th scope="row">Support for same-sex marriage rights: <h6 style="color:#e67e22">{{ person[6] }}/10</h></th>
+            </tr>
+            <tr>
+              <th scope="row">Support for second amendment rights: <h6 style="color:#e67e22">{{ person[7] }}/10</h></th>
+            </tr>
+            <tr>
+              <th scope="row">Support for affirmative action programs: <h6 style="color:#e67e22">{{ person[8] }}/10</h></th>
+            </tr>
+            <tr>
+              <th scope="row">Support for harsher immigration policies: <h6 style="color:#e67e22">{{ person[9] }}/10</h></th>
+            </tr>
+            <tr>
+              <th scope="row">Support for government aid programs (including healthcare, food stamps, etc.): <h6 style="color:#e67e22">{{ person[10] }}/10</h></th>
+            </tr>
+            <tr>
+              <th scope="row">Support for legalization/decriminalization of recreational Marijuana use: <h6 style="color:#e67e22">{{ person[11] }}/10</h></th>
+            </tr>
+            <tr>
+              <th scope="row">Support for raising taxes on the wealthy: <h6 style="color:#e67e22">{{ person[12] }}/10</h></th>
+            </tr>
+            <tr>
+              <th scope="row">Support for the federal minimum wage: <h6 style="color:#e67e22">{{ person[13] }}/10</h></th>
+            </tr>
+            <tr>
+              <th scope="row">Support for increased government investment into environmental protection initiatives: <h6 style="color:#e67e22">{{ person[14] }}/10</h></th>
+            </tr>
+            <tr>
+              <th scope="row">Support for increased government investment into military: <h6 style="color:#e67e22">{{ person[15] }}/10</h></th>
+            </tr>
+            <tr>
+              <th scope="row">Support for the requirement that all police officers wear body cameras: <h6 style="color:#e67e22">{{ person[16] }}/10</h></th>
+            </tr>
+            <tr>
+              <th scope="row">Support for increased government investment into public schools & universities: <h6 style="color:#e67e22">{{ person[17] }}/10</h></th>
+            </tr>
+            <tr>
+              <th scope="row">Support for increased government investment into renewable energy initiatives: <h6 style="color:#e67e22">{{ person[18] }}/10</h></th>
+            </tr>
+            <tr>
+              <th scope="row"><h6 style="color:#3498db">Image:</h><br></br/>
+              <img src='{{ person[19] }}' height=300 width=300 style='border-radius:20px;'>
+              </th>
+            </tr>
+        </tbody>
+      </table>
+    </center>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      $('#listDiv').fadeIn('slow');
+    </script>
+  </body>
+</html>

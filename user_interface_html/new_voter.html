@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <title>PolitiKnow Registration</title>
+    <title>PolitiKnow Signin</title>
 
     <!-- Custom styles for this template -->
     <style>
@@ -60,10 +60,23 @@
   </head>
 
   <body class="text-center">
-    <form class="form-signin">
-      <button class="btn btn-lg btn-success btn-block" type="button" onclick="window.location.href='register_voter'">I'm a Voter</button><br />
-      <button class="btn btn-lg btn-success btn-block" type="button" onclick="window.location.href='register_politician'">I'm a Politician</button>
-      <p class="mt-5 mb-3 text-muted">&copy; PolitiKnow 2018</p>
+    <form class="form-signin" action="/auth" method="POST">
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <div class="alert alert-info" role="alert">
+        <strong>Awesome!</strong> You're all set up. Try logging in.
+      </div>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input name="email" id="email" type="email" class="form-control" placeholder="Email address" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input name="password" type="password" id="password" class="form-control" placeholder="Password" required>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <label>Don't have an account? Create one <a href="register">here</a></label>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
     </form>
   </body>
 </html>

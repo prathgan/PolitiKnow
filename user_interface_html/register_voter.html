@@ -60,22 +60,16 @@
   </head>
 
   <body class="text-center">
-    <form class="form-signin" method="POST">
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <div class="alert alert-danger" role="alert">
-        Incorrect email or password. Please try again.
-      </div>
+    <form class="form-signin" action="/register_voter_process" method="POST">
+      <h1 class="h3 mb-3 font-weight-normal">Fill out the information below to register your PolitiKnow account today!</h1>
       <label for="inputEmail" class="sr-only">Email address</label>
       <input name="email" id="email" type="email" class="form-control" placeholder="Email address" required autofocus>
       <label for="inputPassword" class="sr-only">Password</label>
       <input name="password" type="password" id="password" class="form-control" placeholder="Password" required>
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="registerUser()">Sign in</button>
-      <label>Don't have an account? Create one <a href="register">here</a></label>
+      <label for="inputLoc" class="sr-only">State (Postal Code Abbr.)</label>
+      <input name="state" type="text" id="state" class="form-control" placeholder="State" required>
+      <br>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
       <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
     </form>
   </body>

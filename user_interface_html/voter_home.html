@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
+    <title>Explore</title>
+  </head>
+  <body style="background-color:#ced6e0; font-family: 'Niramit', sans-serif;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/voter_homepage/{{ card[20] }}">PolitiKnow</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/voter_homepage/{{ card[20] }}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/voter_interests/{{ card[20] }}">Interests</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/voter_home_initial/{{ card[20] }}">Explore</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Politician Name" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <center>
+    <div id="info_card" style="display:none;">
+    <div style="background-color:#3498db;width:610px;height: 740px;border-radius: 30px;display:flex; justify-content:center;align-items:center">
+    <div style="; background-color:#dfe4ea;width:600px;height: 730px;border-radius: 30px;">
+      <center>
+      <hr style="height:10px; visibility:hidden;" />
+      <img src='{{ card[19] }}' height=300 width=300 style='border-radius:20px;'>
+      <!--<img src="static/imgs/obama.jpg" height=300 width=300></img>-->
+      <h1>{{ card[0] }}</h1>
+      </center>
+      <h5 style="color:#70a1ff;display:inline">Party: </h5><h5 style="color:#b2bec3;display:inline">{{ card[3] }}</h5><br>
+      <h5 style="color:#70a1ff;display:inline">Age: </h5><h5 style="color:#b2bec3;display:inline">{{ card[1] }}</h5><br>
+      <h5 style="color:#70a1ff;display:inline">Election: </h5><h5 style="color:#b2bec3;display:inline">{{ card[2] }}</h5><br>
+      <br>
+      <div style="width:550px">
+        {{ card[4] }}
+      </div>
+      <br></br>
+      <div style="display: inline;">
+      <button type="button" class="btn btn-success" style="width:40%" onclick="$.when($('#info_card').fadeOut('fast')).done(function() {window.location.href='/voter_home_positive/{{ card[20] }}';});"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
+      <button type="submit" class="btn btn-danger" style="width:40%" onclick="$.when($('#info_card').fadeOut('fast')).done(function() {window.location.href='/voter_home_negative/{{ card[20] }}';});"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></button>
+      </div>
+      <br></br>
+    </div>
+    </div>
+    </div>
+   </center>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      $('#info_card').fadeIn('slow');
+    </script>
+    </script>
+  </body>
+</html>

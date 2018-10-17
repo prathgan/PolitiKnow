@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <title>PolitiKnow Signin</title>
+
+    <!-- Custom styles for this template -->
+    <style>
+        html,body {
+    height: 100%;
+    }
+
+    body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #333;
+    color: #fff;
+    }
+
+    .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    }
+    .form-signin .checkbox {
+    font-weight: 400;
+    }
+    .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    }
+    .form-signin .form-control:focus {
+    z-index: 2;
+    }
+    .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    }
+    .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    }
+
+    </style>
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" action="/register_politician_process" method="POST">
+      <h1 class="h3 mb-3 font-weight-normal">Fill out the information below to set up your PolitiKnow PoliticianProfile today!</h1>
+      <label for="inputEmail" class="sr-only">Name</label>
+      <input name="name" id="email" type="text" class="form-control" placeholder="Full Name" required autofocus>
+      <label for="a" class="sr-only">Age</label>
+      <input name="age" type="text" id="age" class="form-control" placeholder="Age" required>
+      <label for="a" class="sr-only">Election Type</label>
+      <input name="election" type="text" id="election" class="form-control" placeholder="Election" required>
+      <label for="a" class="sr-only">Political Party</label>
+      <input name="party" type="text" id="party" class="form-control" placeholder="Party" required>
+      <label for="a" class="sr-only">Biography</label>
+      <input name="bio" type="text" id="bio" class="form-control" placeholder="Biography" required>
+
+      <br></br>
+      <!--<label>Move the following slider to the left if you are Democrat, or to the right if you are a Republican:</label><br></br>-->
+      <label>Enter a number between 0 and 10 in the boxes below (10 being "I fully support this", 5 being "I'm indifferent on this matter", and 0 being "I do not support this at all"):
+      </label><br></br>
+
+      <label for="a" class="sr-only">Abortion Rights</label>
+      <input name="abortion" type="text" id="abortion" class="form-control" placeholder="Abortion Rights" required>
+      <label for="a" class="sr-only">Same-Sex Marriage Rights</label>
+      <input name="same_sex" type="text" id="same_sex" class="form-control" placeholder="Same-Sex Marriage Rights" required>
+      <label for="a" class="sr-only">The Right to Bear Arms</label>
+      <input name="arms" type="text" id="arms" class="form-control" placeholder="The Right to Bear Arms" required>
+      <label for="a" class="sr-only">Affirmative Action Programs</label>
+      <input name="affirmative_action" type="text" id="affirmative_action" class="form-control" placeholder="Affirmative Action Programs" required>
+      <label for="a" class="sr-only">Harsher Immigration Policies</label>
+      <input name="immigration" type="text" id="immigration" class="form-control" placeholder="Harsher Immigration Policies" required>
+      <label for="a" class="sr-only">Government Subsidized or Funded Healthcare and other Government Aid</label>
+      <input name="aid" type="text" id="aid" class="form-control" placeholder="Government Healthcare and Aid" required>
+      <label for="a" class="sr-only">The Legalization of Recreational Marijuana Use</label>
+      <input name="weed" type="text" id="weed" class="form-control" placeholder="The Legalization Marijuana" required>
+      <label for="a" class="sr-only">Raising Taxes on the Wealthy</label>
+      <input name="taxes" type="text" id="taxes" class="form-control" placeholder="Raising Taxes on the Wealthy" required>
+      <label for="a" class="sr-only">Raising the Minimum Wage</label>
+      <input name="wage" type="text" id="wage" class="form-control" placeholder="Raising the Minimum Wage" required>
+      <label for="a" class="sr-only">Increased Government Investment in Evironmental Protection Initiatives</label>
+      <input name="enviro" type="text" id="enviro" class="form-control" placeholder="Increased EPA Spending" required>
+      <label for="a" class="sr-only">Increased Government Investment in Military Programs</label>
+      <input name="military" type="text" id="military" class="form-control" placeholder="Increased Military Spending" required>
+      <label for="a" class="sr-only">The Requirement that All Police Officers Must Wear Body Cameras</label>
+      <input name="bodycams" type="text" id="bodycams" class="form-control" placeholder="Police Officers Wearing BodyCams" required>
+      <label for="a" class="sr-only">Increased Government Investment in Public Schools and Universities</label>
+      <input name="schools" type="text" id="schools" class="form-control" placeholder="Increased Education Spending" required>
+      <label for="a" class="sr-only">Increased Government Investment in Renewable Energy Initiatives</label>
+      <input name="renewable_e" type="text" id="renewable_e" class="form-control" placeholder="Increased Renewable Energy Spending" required>
+
+      <br></br>
+      <!--<label>Move the following slider to the left if you are Democrat, or to the right if you are a Republican:</label><br></br>-->
+      <label>Enter a number between 0 and 10 in the boxes below (10 being "I fully support this", 5 being "I'm indifferent on this matter", and 0 being "I do not support this at all"):
+      </label><br></br>
+
+      <label for="a" class="sr-only">URL Link to Image of Myself</label>
+      <input name="image_url" type="text" id="image_url" class="form-control" placeholder="Image URL" required>
+
+      <br></br>
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <title>Interests</title>
+  </head>
+  <body style="background-color:#ced6e0; font-family: 'Niramit', sans-serif;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/voter_homepage/{{ datum[0] }}">PolitiKnow</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/voter_homepage/{{ datum[0] }}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/voter_interests/{{ datum[0] }}">Interests</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/voter_home_initial/{{ datum[0] }}">Explore</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Politician Name" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <br></br>
+    <center>
+        <h1>Politicians I'm Interested In</h1>
+    </center>
+    <br>
+    <div style="padding-left:6%">
+      Below is a list of politicians which you have "liked" in the past, along with some information about them.
+      Click on the links or buttons to learn more about them or contact them.
+    </div>
+    <br>
+    <br>
+    <div id="listDiv">
+    <center>
+      <table class="table table-hover table-dark" style="width:90%;border-radius: 20px;">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Party</th>
+            <th scope="col">Election</th>
+            <th scope="col">More Information</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for person in datum[1] %}
+            <tr>
+                <th scope="row">{{ person[0] }}</th>
+                <td>{{ person[3] }}</td>
+                <td>{{ person[2] }}</td>
+                <td><button type="button" class="btn btn-info" onclick="my_name = (window.location.href).substring(38);$.when($('#listDiv').fadeOut('fast')).done(function() {window.location.href='more_info/'+my_name+'/{{ person[0] }}';});">More Info</button></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </center>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

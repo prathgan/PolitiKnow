@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <title>Dashboard</title>
+  </head>
+  <body style="background-color:#ced6e0; font-family: 'Niramit', sans-serif;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">PolitiKnow</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/voter_homepage/{{ info[0] }}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/voter_interests/{{ info[0] }}">Interests</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/voter_home_initial/{{ info[0] }}">Explore</a>
+          </li>
+        </ul>
+        <form id="search_form" method="POST" class="form-inline my-2 my-lg-0">
+          <input id="poli_name_text" class="form-control mr-sm-2" type="search" placeholder="Politician Name" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <br>
+    <div style="padding-left:15px">
+      <h1>Welcome to PolitiKnow!</h1>
+      <br>
+      <h3>Get started!</h>
+      <h5><button type="button" class="btn btn-primary" onclick="window.location.href='/voter_home_initial/{{ info[0] }}'"><i class="fa fa-id-card-o" aria-hidden="true"></i></button> Explore new candidates</h5>
+      <h5><button type="button" class="btn btn-success" onclick="window.location.href='/voter_interests/{{ info[0] }}'"><i class="fa fa-check-circle-o" aria-hidden="true"></i></button> View the candidates you're interested in</h5>
+      <h5><button type="button" class="btn btn-warning" onclick="window.location.href='/about'"><i class="fa fa-info-circle" aria-hidden="true"></i></button> Learn more about PolitiKnow and how it works</h5>
+
+      <br>
+      <h3>Account Options</h>
+      <h5><button type="button" class="btn btn-danger" onclick="window.location.href='/'"><i class="fa fa-sign-out" aria-hidden="true"></i></button> Log Out</h5>
+      <h5><button type="button" class="btn btn-secondary" onclick="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> Edit Profile</h5>
+      <h5><button type="button" class="btn btn-info" onclick="#"><i class="fa fa-sliders" aria-hidden="true"></i></button> Edit Settings</h5>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+    $('#search_form').submit(function ()
+    {
+      var action = '';
+      poli_name = document.getElementById("poli_name_text").value;
+      action = '/poli_view/'+poli_name+'/{{ info[0] }}';
+      $(this).attr('action', action);
+    });
+    </script>
+  </body>
+</html>
